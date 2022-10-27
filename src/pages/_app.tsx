@@ -2,7 +2,7 @@ import { AnimatePresence } from 'framer-motion';
 import { ApolloProvider } from '@apollo/client';
 import { AppProps } from 'next/app';
 import { client } from 'apollo-client';
-import { ThemeProvider, useTheme } from 'next-themes';
+import { ThemeProvider } from 'next-themes';
 
 import '../styles/index.css';
 import { Layout } from 'Templates/Layout';

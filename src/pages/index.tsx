@@ -1,10 +1,7 @@
-import { AnimatePage } from 'Atoms/AnimatePage';
-import { Container } from 'Atoms/Container';
-import { SeoHead } from 'Atoms/SeoHead';
-import Typed from 'react-typed';
-
 import LogoDotNet from 'Public/assets/tools/dotnet.svg';
 import LogoFigma from 'Public/assets/tools/figma.svg';
+import LogoGitpodDark from 'Public/assets/tools/gitpodDark.svg';
+import LogoGitpodLight from 'Public/assets/tools/gitpodLight.svg';
 import LogoGraphql from 'Public/assets/tools/graphql.svg';
 import LogoHygraph from 'Public/assets/tools/hygraph.svg';
 import LogoNext from 'Public/assets/tools/nextjs.svg';
@@ -12,8 +9,10 @@ import LogoPrismic from 'Public/assets/tools/prismic.svg';
 import LogoStorybook from 'Public/assets/tools/storybook.svg';
 import LogoSvelte from 'Public/assets/tools/svelte.svg';
 import LogoVercel from 'Public/assets/tools/vercel.svg';
-import LogoGitpodLight from 'Public/assets/tools/gitpodLight.svg';
-import LogoGitpodDark from 'Public/assets/tools/gitpodDark.svg';
+import Typed from 'react-typed';
+import { AnimatePage } from 'Atoms/AnimatePage';
+import { Container } from 'Atoms/Container';
+import { SeoHead } from 'Atoms/SeoHead';
 import { useTheme } from 'next-themes';
 
 const IndexPage = () => {
