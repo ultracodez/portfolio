@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Jacob from './jacob-herper.png';
+import EMC from './face.png';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
@@ -12,18 +12,19 @@ const Logo = () => {
 				initial={{ opacity: 0, y: -10 }}
 			>
 				<Image
-					src={Jacob}
+					src={EMC}
 					width={48}
 					height={48}
 					quality={100}
-					alt="Vectorised image of Jacob Herper"
+					alt="Vectorised image of Eduardo Maroto Campos"
 					className="w-12 h-12"
+					style={{ borderRadius: '10px', overflow: 'hidden' }}
 				/>
 				<span className="transition duration-300 opacity-100 group-hover:opacity-0">
-					@jakeherp
+					@ultracodez
 				</span>
 				<span className="absolute transition duration-300 left-16 opacity-0 group-hover:opacity-100 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-blue-start to-blue-stop dark:from-purple-start dark:to-purple-stop">
-					Jacob Herper
+					Eduardo Maroto Campos
 				</span>
 			</motion.a>
 		</Link>
