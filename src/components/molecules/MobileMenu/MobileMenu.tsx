@@ -35,8 +35,9 @@ const MobileMenu = ({ isOpen }: MobileMenuProps) => {
 						}}
 					>
 						<ul className="flex flex-col justify-center align-center text-center gap-4 h-full">
-							{navItems.map(({ href, title }, i) => (
+							{navItems.map(({ href, title, type }, i) => (
 								<NavigationItem
+									type={type}
 									href={href}
 									title={title}
 									key={href}
