@@ -1,5 +1,6 @@
 import { client } from 'apollo-client';
 import format from 'date-fns/format';
+import classNames from 'classnames';
 import { gql } from '@apollo/client';
 import { IBlogPost } from '@types';
 import { NextPage } from 'next';
@@ -11,6 +12,8 @@ import { Container } from 'Atoms/Container';
 import { SeoHead } from 'Atoms/SeoHead';
 
 import { mdxComponents } from 'Utils/mdxComponents';
+import { data } from 'browserslist';
+import Image from 'next/image';
 
 interface IProps {
 	title: string;
@@ -18,6 +21,7 @@ interface IProps {
 	seoDescription: string;
 	publishedDate: string;
 	slug: string;
+	imageUrl: string;
 }
 
 const PostPage: NextPage<IProps> = ({
@@ -25,6 +29,7 @@ const PostPage: NextPage<IProps> = ({
 	content,
 	seoDescription,
 	publishedDate,
+	imageUrl,
 }) => {
 	// TODO: Re-add
 	// const numOfWords = content.split(' ').length;
@@ -37,6 +42,18 @@ const PostPage: NextPage<IProps> = ({
 				description={seoDescription}
 			/>
 			<Container>
+				{imageUrl ? (
+					<div className="relative h-96">
+						<Image
+							src={imageUrl}
+							objectFit="cover"
+							style={{ borderRadius: '2rem' }} // just an example
+							layout="fill" // just an example
+						></Image>
+					</div>
+				) : (
+					<></>
+				)}
 				<h1 className="headline text-3xl md:text-4xl lg:text-5xl mt-8">
 					{title}
 				</h1>
@@ -84,6 +101,9 @@ export async function getStaticProps({ params }: Params) {
 					content {
 						raw
 					}
+					image {
+						url
+					}
 					seoDescription
 					publishedDate
 					slug
@@ -101,6 +121,7 @@ export async function getStaticProps({ params }: Params) {
 			slug: data.blog.slug,
 			title: data.blog.title,
 			seoDescription: data.blog.seoDescription,
+			imageUrl: data.blog.image.url,
 		},
 	};
 }

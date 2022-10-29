@@ -2,6 +2,7 @@ import classNames from 'classnames';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { motion, Variants } from 'framer-motion';
+import { Button } from 'Atoms/Button';
 
 export interface NavigationItemProps {
 	href: string;
@@ -10,11 +11,13 @@ export interface NavigationItemProps {
 	initial: string;
 	animate: string;
 	customDelay: number;
+	type: string;
 }
 
 const NavigationItem = ({
 	href,
 	title,
+	type,
 	variants,
 	initial,
 	animate,
