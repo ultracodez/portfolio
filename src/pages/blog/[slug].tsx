@@ -42,7 +42,7 @@ const PostPage: NextPage<IProps> = ({
 				description={seoDescription}
 			/>
 			<Container>
-				{imageUrl ? (
+				{imageUrl && imageUrl !== '___noImage' ? (
 					<div className="relative h-96">
 						<Image
 							src={imageUrl}
@@ -52,7 +52,7 @@ const PostPage: NextPage<IProps> = ({
 						></Image>
 					</div>
 				) : (
-					<></>
+					<p>_</p>
 				)}
 				<h1 className="headline text-3xl md:text-4xl lg:text-5xl mt-8">
 					{title}
@@ -121,7 +121,7 @@ export async function getStaticProps({ params }: Params) {
 			slug: data.blog.slug,
 			title: data.blog.title,
 			seoDescription: data.blog.seoDescription,
-			imageUrl: data.blog.image.url,
+			imageUrl: data.blog.image?.url ? data.blog.image?.url : '___noImage',
 		},
 	};
 }
