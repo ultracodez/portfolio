@@ -20,9 +20,7 @@ export const Layout: FC<LayoutProps> = ({ children }) => {
 	return (
 		<div className="flex flex-col justify-between min-h-screen">
 			<SkipToContent />
-			{
-				<Header />
-				}
+			<Header />
 			<main id="content">{children}</main>
 			<Footer />
 		</div>

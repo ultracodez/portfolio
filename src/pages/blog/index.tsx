@@ -62,8 +62,8 @@ export async function getStaticProps() {
 		`,
 	});
 
-	var bloggs = data.blogs.map((blog: any) => {
-		var blogg = JSON.parse(JSON.stringify(blog));
+	const bloggs = data.blogs.map((blog: any) => {
+		const blogg = JSON.parse(JSON.stringify(blog));
 		blogg.publishedDate = format(new Date(blog.publishedDate), 'do MMMM yyyy');
 		return blogg;
 	});
