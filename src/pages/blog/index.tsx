@@ -8,6 +8,7 @@ import { NextPage } from 'next';
 import { AnimatePage } from 'Atoms/AnimatePage';
 import { Container } from 'Atoms/Container';
 import { SeoHead } from 'Atoms/SeoHead';
+import { useState } from 'react';
 
 interface IProps {
 	posts: IBlogPost[];
@@ -24,21 +25,24 @@ const BlogPage: NextPage<IProps> = ({ posts }) => {
 				<h1 className="headline text-3xl md:text-5xl lg:text-6xl pb-8 mt-8">
 					Blog
 				</h1>
-				{posts.map(({ title, slug, introText, publishedDate }) => (
-					<article key={slug} className="mb-12">
-						<Link href={`/blog/${slug}`}>
-							<a className="group">
-								<h1 className="text-2xl font-bold mb-2 relative inline-block underlined">
-									{title}
-								</h1>
-								<p>{introText}</p>
-								<em className="block mt-2">
-									Published on {format(new Date(publishedDate), 'do MMMM yyyy')}
-								</em>
-							</a>
-						</Link>
-					</article>
-				))}
+				{posts.map(({ title, slug, introText, publishedDate }) => {
+					return (
+						<article key={slug} className="mb-12">
+							<Link href={`/blog/${slug}`}>
+								<a className="group">
+									<h1 className="text-2xl font-bold mb-2 relative inline-block underlined">
+										{title}
+									</h1>
+									<p>{introText}</p>
+
+									<em className="block mt-2">
+										Published on <span>{publishedDate}</span>
+									</em>
+								</a>
+							</Link>
+						</article>
+					);
+				})}
 			</Container>
 		</AnimatePage>
 	);
@@ -58,9 +62,15 @@ export async function getStaticProps() {
 		`,
 	});
 
+	var bloggs = data.blogs.map((blog: any) => {
+		var blogg = JSON.parse(JSON.stringify(blog));
+		blogg.publishedDate = format(new Date(blog.publishedDate), 'do MMMM yyyy');
+		return blogg;
+	});
+
 	return {
 		props: {
-			posts: data.blogs as IBlogPost[],
+			posts: bloggs as IBlogPost[],
 		},
 	};
 }

@@ -52,7 +52,7 @@ const PostPage: NextPage<IProps> = ({
 						></Image>
 					</div>
 				) : (
-					<p>_</p>
+					<p></p>
 				)}
 				<h1 className="headline text-3xl md:text-4xl lg:text-5xl mt-8">
 					{title}
