@@ -37,30 +37,40 @@ const AboutPage: NextPage<IProps> = () => {
 					Senior Fullstack Software Engineer from the U.S.A.
 				</h2>
 				<p className="mt-8">
-					As a passionate front-end developer, I create amazing websites and web
-					apps to make the internet a better place. I am an advocate for web
-					performance and accessibility as well as a JAMstack enthusiast with
-					experience in serverless technologies.
+					Since the age of 11, I was extremly interested in how things worked.
+					My father taught me how to program, first using blocks in Scratch,
+					then using Python. At the age of 13, I taught myself C++ using the
+					creator of C++, Bjarne Stroustrup's offical guide. Soon after that, I
+					learned C# and became obsessed with creating websites with ASP.NET.
+					Finally, I discovered Next.js, and found the incredible capabilities
+					that it had to offer.
 				</p>
 				<p className="my-4">
-					I am 31 years old and have been a web developer for as long as I can
-					think. The technologies I work with are JavaScript, HTML and CSS with
-					a focus on the frameworks React.js, Gatsby, Next.js, Node and Express.
-					I use code not only to do my day-to-day job, but also to solve
-					everyday problems I come across.
+					As they say, the rest is history, and today I am here and proud to
+					showcase my work in this website made possible by{' '}
+					<a
+						target="_blank"
+						className="underline underline-offset-1"
+						href="https://jacobherper.com/"
+					>
+						Jacob Herper
+					</a>
+					. Thanks :{')'}
 				</p>
-				<p>
-					When I am not writing code I love to spend time with my wife and 3
-					year old daughter at home in London or travelling around the world. We
-					are quite a multi-cultural family with me having grown up in Germany
-					🇩🇪 and my wife being from Mexico 🇲🇽, which is why we raise our
-					daughter trilingual. I myself speak five languages (some better than
-					others). Furthermore I enjoy cooking fresh food when I come home after
-					a long day at the office.
-				</p>
+				<p></p>
 
 				<h2 className="headline mt-12 mb-4 text-4xl">Experience</h2>
-
+				<p className="mb-6">
+					I've created multiple tools and projects, and you can see them all{' '}
+					<a
+						target="_blank"
+						className="underline underline-offset-1"
+						href="/projects"
+					>
+						here
+					</a>
+					.
+				</p>
 				<h2 className="headline mt-12 mb-4 text-4xl">Education</h2>
 				<p className="mb-6">
 					I am mostly self-taught, but here are some of the most relevant
@@ -70,7 +80,7 @@ const AboutPage: NextPage<IProps> = () => {
 				{
 					//<Education education={education} />
 				}
-				<div className="flex justify-center mt-8">
+				<div style={{ display: 'none' }} className="flex justify-center mt-8">
 					<Button
 						href="/cv-2022.pdf"
 						download={true}
