@@ -40,15 +40,16 @@ const AboutPage: NextPage<IProps> = () => {
 					Since the age of 11, I was extremly interested in how things worked.
 					My father taught me how to program, first using blocks in Scratch,
 					then using Python. At the age of 13, I taught myself C++ using the
-					creator of C++, Bjarne Stroustrup's offical guide. Soon after that, I
-					learned C# and became obsessed with creating websites with ASP.NET.
-					Finally, I discovered Next.js, and found the incredible capabilities
-					that it had to offer.
+					creator of C++, Bjarne Stroustrup&apos;s offical guide. Soon after
+					that, I learned C# and became obsessed with creating websites with
+					ASP.NET. Finally, I discovered Next.js, and found the incredible
+					capabilities that it had to offer.
 				</p>
 				<p className="my-4">
 					As they say, the rest is history, and today I am here and proud to
 					showcase my work in this website made possible by{' '}
 					<a
+						rel="noreferrer"
 						target="_blank"
 						className="underline underline-offset-1"
 						href="https://jacobherper.com/"
@@ -61,7 +62,8 @@ const AboutPage: NextPage<IProps> = () => {
 
 				<h2 className="headline mt-12 mb-4 text-4xl">Experience</h2>
 				<p className="mb-6">
-					I've created multiple tools and projects, and you can see them all{' '}
+					I&apos;ve created multiple tools and projects, and you can see them
+					all{' '}
 					<a
 						target="_blank"
 						className="underline underline-offset-1"

@@ -61,9 +61,8 @@ const IndexPage = () => {
 					</h1>
 					<p className="my-8 text-lg">
 						I am a passionate Software Engineer, specialised in front-end
-						development using React and TypeScript. As an advocate for web
-						performance and accessibility and an evangelist for the Jamstack, I
-						create amazing web applications to make the internet a better place.
+						development using React and TypeScript. I love making productivity
+						tools for the better good, and whatever I can do to automate, I do.
 						You can talk to me about{' '}
 						<Typed
 							loop

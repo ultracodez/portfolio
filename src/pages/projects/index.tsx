@@ -25,7 +25,7 @@ const AboutPage: NextPage<any> = ({ projects }) => {
 			/>
 			<Container>
 				<h1 className="headline text-2xl md:text-4xl lg:text-5xl mt-8">
-					Eduardo Maroto Campos' Projects
+					Eduardo Maroto Campos&apos; Projects
 				</h1>
 				<p className="my-12">
 					A collection of ever-growing tools, apps and miscellaneous projects

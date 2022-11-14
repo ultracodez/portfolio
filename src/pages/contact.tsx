@@ -34,9 +34,10 @@ const AboutPage: NextPage<IProps> = () => {
 					Contact Me
 				</h1>
 				<p className="mt-8">
-					Want to do a collaboration or find out if I'm available for something?
-					Send me an email at{' '}
+					Want to do a collaboration or find out if I&apos;m available for
+					something? Send me an email at{' '}
 					<a
+						rel="noreferrer"
 						target="_blank"
 						className="underline underline-offset-1"
 						href="mailto:ultracodez@outlook.com"
