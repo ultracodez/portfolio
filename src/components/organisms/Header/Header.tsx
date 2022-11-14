@@ -22,7 +22,7 @@ export const navItems = [
 		title: 'Blog',
 		type: 'normal',
 	},
-	{ href: '/projects', title: 'Projects' },
+	{ href: '/projects', title: 'Projects', type: '' },
 ];
 
 const Header = () => {
